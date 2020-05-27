@@ -53,8 +53,8 @@ public class GUI_Input extends JFrame {
                 input.setText("+veNum");
                 valid = false;
             } else {
-                MainData.numberOfNodes = Integer.parseInt(input.getText().trim());
-                MainData.initialize();
+                MainData.numOfNodes = Integer.parseInt(input.getText().trim());
+                MainData.segmentsGains = new double[MainData.numOfNodes][MainData.numOfNodes];
                 dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
                 SwingUtilities.invokeLater(() -> new GUI_Data());
             }
@@ -97,9 +97,5 @@ public class GUI_Input extends JFrame {
 
             }
         });
-    }
-
-    public static void main(String[] args) {
-        GUI_Input gui_input = new GUI_Input();
     }
 }

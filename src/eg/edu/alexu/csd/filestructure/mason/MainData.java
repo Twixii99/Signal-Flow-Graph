@@ -1,6 +1,6 @@
 package eg.edu.alexu.csd.filestructure.mason;
 
-public class Data {
+public class MainData {
         public static int width, height;
         public static double overAllTF;
         public static String[] loops;
