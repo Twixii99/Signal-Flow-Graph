@@ -2,6 +2,7 @@ package eg.edu.alexu.csd.filestructure.mason;
 
 import org.graphstream.graph.Edge;
 import org.graphstream.graph.Graph;
+import org.graphstream.graph.implementations.MultiGraph;
 import org.graphstream.graph.implementations.SingleGraph;
 
 public class GraphDrawing {
@@ -10,7 +11,7 @@ public class GraphDrawing {
     private int[] addresses = new int[MainData.numOfNodes+1];
 
     public GraphDrawing() {
-        this.signalFlowGraph = new SingleGraph("Signal Flow Grapgh");
+        this.signalFlowGraph = new MultiGraph("Signal Flow Grapgh");
         System.setProperty("org.graphstream.ui.renderer", "org.graphstream.ui.j2dviewer.J2DGraphRenderer");
         this.signalFlowGraph.addAttribute("ui.antialias");
         this.signalFlowGraph.addAttribute("ui.quality");
